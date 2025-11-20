@@ -1,0 +1,44 @@
+// Implement additional features in existing pages
+
+// Enhanced Students Page with Search, Filter, Export
+// Add to Students.tsx
+import { SearchOutlined, FilterOutlined } from '@ant-design/icons'
+import { Input, Select } from 'antd'
+import { useMemo, useState } from 'react'
+import ExportButton from '../components/Common/ExportButton'
+
+const { Search } = Input
+
+// Add to the component
+const [searchText, setSearchText] = useState('')
+const [gradeFilter, setGradeFilter] = useState('')
+
+const filteredStudents = useMemo(() => {
+  return students.filter(student => {
+    const matchesSearch = student.name.toLowerCase().includes(searchText.toLowerCase()) ||
+                          student.email.toLowerCase().includes(searchText.toLowerCase())
+    const matchesGrade = !gradeFilter || student.grade === gradeFilter
+    return matchesSearch && matchesGrade
+  })
+}, [students, searchText, gradeFilter])
+
+// Add to the header
+<Space>
+  <Search
+    placeholder="Search students"
+    onChange={e => setSearchText(e.target.value)}
+    style={{ width: 200 }}
+  />
+  <Select
+    placeholder="Filter by grade"
+    onChange={value => setGradeFilter(value)}
+    style={{ width: 150 }}
+    allowClear
+  >
+    <Option value="Grade 9">Grade 9</Option>
+    <Option value="Grade 10">Grade 10</Option>
+    <Option value="Grade 11">Grade 11</Option>
+    <Option value="Grade 12">Grade 12</Option>
+  </Select>
+  <ExportButton data={students} filename="students" />
+</Space>

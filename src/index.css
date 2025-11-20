@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+}
+
+.ant-layout-sider {
+  @apply bg-white shadow-lg;
+}
+
+.ant-menu-dark {
+  @apply bg-transparent;
+}
+
+.ant-menu-item {
+  @apply rounded-lg mx-2 mb-2;
+}
+
+.ant-menu-item:hover {
+  @apply bg-indigo-100;
+}
+
+.ant-menu-item-selected {
+  @apply bg-indigo-600 text-white;
+}
+
+.ant-card {
+  @apply rounded-xl border-0 shadow-sm hover:shadow-md transition-shadow;
+}
+
+.ant-table {
+  @apply rounded-xl overflow-hidden;
+}
+
+.ant-table-thead > tr > th {
+  @apply bg-gray-50 font-semibold text-gray-700;
+}
+
+.ant-btn-primary {
+  @apply rounded-lg;
+}
+
+.ant-modal-content {
+  @apply rounded-xl;
+}
+
+.ant-input, .ant-select, .ant-picker {
+  @apply rounded-lg;
+}
+
+.ant-tag {
+  @apply rounded-full px-3 py-1;
+}
+
+.ant-statistic-title {
+  @apply text-gray-600 font-medium;
+}
+
+.ant-statistic-content-value {
+  @apply text-2xl font-bold text-indigo-600;
+}
