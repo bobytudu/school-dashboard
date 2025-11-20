@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Card } from 'antd'
 
-const StatCard = ({ title, value, change, icon: Icon, color, index }) => {
+const StatCard = ({ title, value, change, icon: Icon, color, index }: any) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

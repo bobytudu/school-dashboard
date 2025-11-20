@@ -1,11 +1,11 @@
 import { Row, Col } from 'antd'
-import StatCard from '../common/StatCard'
 import { 
   UserGroupIcon, 
   AcademicCapIcon, 
   CalendarIcon, 
   CurrencyDollarIcon 
 } from '@heroicons/react/24/outline'
+import StatCard from '../../components/common/StatCard'
 
 const OverviewStats = () => {
   const stats = [

@@ -26,7 +26,7 @@ interface PageProps {
   extra?: React.ReactNode;
 }
 
-const Page: React.FC<PageProps> = ({ title, subtitle, children, extra }) => {
+const Page: React.FC<PageProps> = ({ title, subtitle, children }) => {
   return (
     <PageContainer
       initial={{ opacity: 0 }}

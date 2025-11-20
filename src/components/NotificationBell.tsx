@@ -1,10 +1,10 @@
 import { BellOutlined } from '@ant-design/icons'
 import { Badge, Popover, List, Button } from 'antd'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const NotificationBell = () => {
-  const [count, setCount] = useState(3)
+  const [count] = useState(3)
 
   const notifications = [
     {
